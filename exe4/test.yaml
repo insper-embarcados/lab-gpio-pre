@@ -1,0 +1,17 @@
+name: Pushbutton deboucing test
+author: Rafael Corsi
+version: 1
+
+steps:
+  - delay: 10ms
+  - set-control:
+      part-id: btn1
+      control: pressed
+      value: 1
+  - delay: 100ms
+  - set-control:
+      part-id: btn1
+      control: pressed
+      value: 0
+
+  - wait-serial: 'Button pressed 1 times'
