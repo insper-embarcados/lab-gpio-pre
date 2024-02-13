@@ -54,7 +54,7 @@ def run_test(name):
     gen_wokwi_toml(name)
     copy_files(name)
     os.chdir(test_folder)
-    command = "wokwi-cli --timeout 10000 --scenario test.yaml"
+    command = "wokwi-cli --timeout 5000 --scenario test.yaml"
     process = subprocess.run(
         command, shell=True, stderr=subprocess.PIPE, text=True
     )
@@ -67,3 +67,9 @@ def test_exe1():
 
 def test_exe2():
     assert run_test("exe2") == 0
+
+def test_exe3():
+    assert run_test("exe3") == 0
+
+def test_exe4():
+    assert run_test("exe4") == 0

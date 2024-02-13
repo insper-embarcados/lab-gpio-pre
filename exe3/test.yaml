@@ -3,28 +3,28 @@ author: Rafael Corsi
 version: 1
 
 steps:
+  - delay: 250ms
 ## btn g pressed
-  - delay: 150ms
   - set-control:
       part-id: btng
       control: pressed
       value: 1
   - delay: 100ms
   - set-control:
-      part-id: btn1
+      part-id: btng
       control: pressed
       value: 0
   - delay: 100ms
 
-  - wait-pin:
+  - expect-pin:
       part-id: ledg
       pin: A 
       value: 1
-  - wait-pin:
+  - expect-pin:
       part-id: ledr
       pin: A 
       value: 0
-
+ 
 ## btn g pressed
   - set-control:
       part-id: btng
@@ -37,11 +37,11 @@ steps:
       value: 0
   - delay: 100ms
 
-  - wait-pin:
+  - expect-pin:
       part-id: ledg
       pin: A 
       value: 0
-  - wait-pin:
+  - expect-pin:
       part-id: ledr
       pin: A 
       value: 0
@@ -58,11 +58,11 @@ steps:
       value: 0
   - delay: 100ms
 
-  - wait-pin:
+  - expect-pin:
       part-id: ledg
       pin: A 
       value: 0
-  - wait-pin:
+  - expect-pin:
       part-id: ledr
       pin: A 
       value: 1
@@ -79,11 +79,11 @@ steps:
       value: 0
   - delay: 100ms
 
-  - wait-pin:
+  - expect-pin:
       part-id: ledg
       pin: A 
       value: 0
-  - wait-pin:
+  - expect-pin:
       part-id: ledr
       pin: A 
       value: 0
