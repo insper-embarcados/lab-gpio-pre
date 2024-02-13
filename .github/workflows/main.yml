@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: insper-embarcados/pico-build@v0
       
-      - name: Upload firmware exe1
+      - name: Upload firmware
         uses: actions/upload-artifact@v4
         with:
           name: build-folder
@@ -45,7 +45,7 @@ jobs:
       - name: Run test
         env:
           WOKWI_CLI_TOKEN: ${{ secrets.WOKWI_CLI_TOKEN }}
-        run: |
+        run:
           pytest test.py -ks exe1
 
   test-exe2:

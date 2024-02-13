@@ -13,22 +13,22 @@
     { "type": "wokwi-gnd", "id": "gnd1", "top": 192, "left": 181.8, "attrs": {} },
     {
       "type": "wokwi-pushbutton",
-      "id": "btn2",
+      "id": "btng",
       "top": 83,
       "left": 105.6,
       "attrs": { "color": "green", "bounce": "0" }
     },
     {
       "type": "wokwi-pushbutton",
-      "id": "btn3",
+      "id": "btnr",
       "top": 15.8,
       "left": 105.6,
       "attrs": { "color": "red", "bounce": "0" }
     },
-    { "type": "wokwi-led", "id": "led1", "top": 15.6, "left": -92.2, "attrs": { "color": "red" } },
+    { "type": "wokwi-led", "id": "ledr", "top": 15.6, "left": -92.2, "attrs": { "color": "red" } },
     {
       "type": "wokwi-led",
-      "id": "led2",
+      "id": "ledg",
       "top": 44.4,
       "left": -121,
       "attrs": { "color": "green" }
@@ -53,14 +53,14 @@
   "connections": [
     [ "pico:GP0", "$serialMonitor:RX", "", [] ],
     [ "pico:GP1", "$serialMonitor:TX", "", [] ],
-    [ "btn2:2.r", "gnd1:GND", "green", [ "h0" ] ],
-    [ "pico:GP28", "btn3:2.l", "green", [ "h0" ] ],
-    [ "btn3:1.r", "gnd1:GND", "green", [ "v0", "h19.4" ] ],
-    [ "pico:GP26", "btn2:1.l", "green", [ "h0" ] ],
-    [ "led2:C", "r2:1", "black", [ "v0" ] ],
-    [ "led1:C", "r3:1", "black", [ "v0" ] ],
-    [ "led2:A", "pico:GP6", "green", [ "v0" ] ],
-    [ "led1:A", "pico:GP4", "green", [ "v0" ] ],
+    [ "btng:2.r", "gnd1:GND", "green", [ "h0" ] ],
+    [ "pico:GP28", "btnr:2.l", "green", [ "h0" ] ],
+    [ "btnr:1.r", "gnd1:GND", "green", [ "v0", "h19.4" ] ],
+    [ "pico:GP26", "btng:1.l", "green", [ "h0" ] ],
+    [ "ledg:C", "r2:1", "black", [ "v0" ] ],
+    [ "ledr:C", "r3:1", "black", [ "v0" ] ],
+    [ "ledg:A", "pico:GP6", "green", [ "v0" ] ],
+    [ "ledr:A", "pico:GP4", "green", [ "v0" ] ],
     [ "pico:GND.4", "r3:2", "black", [ "h-57.6", "v9.64" ] ],
     [ "r2:2", "r3:2", "green", [ "h0" ] ]
   ],
