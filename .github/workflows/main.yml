@@ -58,6 +58,6 @@ jobs:
           name: build-folder
           path: build
 
-      - uses: insper-embarcados/actions-wokwi-test@v1
+      - uses: insper-embarcados/actions-wokwi-test@v2
         with:
           test_name: exe2
