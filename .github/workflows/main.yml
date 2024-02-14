@@ -58,7 +58,7 @@ jobs:
           name: build-folder
           path: build
 
-      - uses: insper-embarcados/actions-wokwi-test@v3
+      - uses: insper-embarcados/actions-wokwi-test@v4
         with:
           token: ${{ secrets.WOKWI_CLI_TOKEN }}
           test_name: exe2
