@@ -5,6 +5,7 @@ on:
   push:
 
 jobs:
+
   build:
     runs-on: ubuntu-latest
     steps:
@@ -59,7 +60,7 @@ jobs:
           name: build-folder
           path: build
 
-      - uses: insper-embarcados/actions-wokwi-test@v0
+      - uses: insper-embarcados/actions-wokwi-test@v1
         with:
           token: ${{ secrets.WOKWI_CLI_TOKEN }}
           test_name: exe2
