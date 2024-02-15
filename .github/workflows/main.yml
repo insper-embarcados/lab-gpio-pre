@@ -50,16 +50,12 @@ jobs:
           pytest test.py -ks exe1
 
   test-exe:
+    runs-on: ubuntu-latest
+    needs: build
     strategy:
       matrix:
         test: [exe1, exe2, exe3, exe4]
-    steps:
-      - uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.version }}
 
-    runs-on: ubuntu-latest
-    needs: build
     steps:
       - uses: actions/checkout@v4
       - name: Download build artifact
