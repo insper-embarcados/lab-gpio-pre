@@ -1,0 +1,30 @@
+name: Code quality
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  cppcheck:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        test: [exe1, exe2, exe3, exe4]
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: insper-embarcados/actions-cppcheck@v1
+        with:
+          c_file: ${{ matrix.test }}/main.c
+
+  embedded-check:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        test: [exe1, exe2, exe3, exe4]
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: insper-embarcados/actions-embedded-check@v1
+        with:
+          c_file: ${{ matrix.test }}/main.c
