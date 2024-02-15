@@ -1,0 +1,32 @@
+name: Code quality test
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: insper-embarcados/pico-build@v0
+      
+      - name: Upload firmware
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-folder
+          path: build/
+
+  cppcheck:
+    runs-on: ubuntu-latest
+    needs: build
+    strategy:
+      matrix:
+        test: [exe1, exe2, exe3, exe4]
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: insper-embarcados/actions-cppcheck@v1
+        with:
+          c_file: ${{ matrix.test }}/main.c
