@@ -73,3 +73,6 @@ def test_exe3():
 
 def test_exe4():
     assert run_test("exe4") == 0
+    
+def test_exe5():
+    assert run_test("exe5") == 0
