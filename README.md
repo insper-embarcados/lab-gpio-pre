@@ -6,3 +6,4 @@ Teste local usando o simulador wokwi e então valide a entrega pelo github actio
 - [exe2](exe2): Lendo um botão
 - [exe3](exe3): Jutando tudo: LED e botão
 - [exe4](exe4): Lógica
+- [exe4](exe5): Boucing
