@@ -1,4 +1,7 @@
-# EXE1
+# EXE6
+
+> [!IMPORTANT]  
+>  Exercício de qualidade de código, o firmware já foi fornecido, vocês devem apenas corrigir problemas de qualidade de código, sem alterar a funcionadade do mesmo.
 
 ![](imgs/exe1.gif)
 
