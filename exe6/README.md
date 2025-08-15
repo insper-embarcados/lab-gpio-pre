@@ -1,7 +1,7 @@
 # EXE6
 
 > [!IMPORTANT]  
->  Exercício de qualidade de código, o firmware já foi fornecido, vocês devem apenas corrigir problemas de qualidade de código, sem alterar a funcionadade do mesmo.
+>  Este é um exercício de qualidade de código. O firmware já foi fornecido; seu trabalho consiste apenas em corrigir problemas relacionados à qualidade do código, sem alterar a funcionalidade do programa.
 
 ![](imgs/exe1.gif)
 
