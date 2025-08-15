@@ -1,4 +1,4 @@
-name: exe0: code quality checks
+name: exe0
 
 on:
   push:
