@@ -5,4 +5,4 @@
 
 ![](imgs/exe1.gif)
 
-Este código controla o display de 7 segementos e a cada vez que você apertar o botão ele vai incrementar um contador e exibir no display, o código já funciona corretamente, mas possui erros de qualidade de código. Você deve corrigir eles nessa entrega, sem alterar o comportamento do programa.
+O firmware controla um display de 7 segmentos e, a cada pressionamento de um botão, incrementa um contador para exibir o valor correspondente no display. A funcionalidade já está correta, mas o código apresenta problemas de qualidade que devem ser corrigidos nesta entrega, sem modificar seu comportamento.
