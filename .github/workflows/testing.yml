@@ -20,3 +20,6 @@ jobs:
       - uses: insper-embarcados/actions-embedded-check@v1
         with:
           c_file: ${{ matrix.test }}/main.c
+      - uses: insper-embarcados/actions-cppcheck@v1
+        with:
+          c_file: ${{ matrix.test }}/main.c
