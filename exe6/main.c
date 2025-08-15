@@ -60,7 +60,7 @@ int main() {
                 cnt = 0;
             }
             seven_seg_display();
-            printf("cnt: %l\n", cnt);
+            printf("cnt: %d\n", cnt);
         }
         last_btn = btn;
         sleep_ms(10); // Polling interval
