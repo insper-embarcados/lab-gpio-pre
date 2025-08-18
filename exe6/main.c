@@ -41,9 +41,9 @@ void seven_seg_display(int cnt) {
 
 int main() {
     stdio_init_all();
-    int aux = 0;
+    //int aux = 0;
     int cnt;
-    int BUTTON_GPIO = FIRST_GPIO + 7;
+    //int BUTTON_GPIO = FIRST_GPIO + 7;
 
     gpio_init(BTN_PIN_G);
     gpio_set_dir(BTN_PIN_G, GPIO_IN);
