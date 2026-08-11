@@ -1,8 +1,13 @@
 # EXE6
 
 > [!IMPORTANT]  
->  Exercício de qualidade de código, o firmware já foi fornecido, vocês devem apenas corrigir problemas de qualidade de código, sem alterar a funcionadade do mesmo.
+>  Este é um exercício de qualidade de código. O firmware já foi fornecido; seu trabalho consiste apenas em corrigir problemas relacionados à qualidade do código, sem alterar a funcionalidade do programa.
+
+> [!TIP]  
+> Analise o github actions para saber qual são os erros existentes, e então corrija o código.
+>
+> Nesse código podemos ter erros das duas categorias: cppcheck e embedded-check.
 
 ![](imgs/exe1.gif)
 
-Este código controla o display de 7 segementos e a cada vez que você apertar o botão ele vai incrementar um contador e exibir no display, o código já funciona corretamente, mas possui erros de qualidade de código. Você deve corrigir eles nessa entrega, sem alterar o comportamento do programa.
+O firmware controla um display de 7 segmentos e, a cada pressionamento de um botão, incrementa um contador para exibir o valor correspondente no display. A funcionalidade já está correta, mas o código apresenta problemas de qualidade que devem ser corrigidos nesta entrega, sem modificar seu comportamento.

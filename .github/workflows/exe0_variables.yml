@@ -1,4 +1,4 @@
-name: exe0
+name: exe0_variables
 
 on:
   push:
@@ -9,7 +9,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        test: [exe0_cppcheck, exe0_variables]
+        test: [exe0_variables]
     steps:
       - uses: actions/checkout@v4
       - uses: insper-embarcados/actions-embedded-check@v1

@@ -1,4 +1,4 @@
-name: exe0
+name: exe0_cppcheck
 
 on:
   push:
@@ -9,9 +9,12 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        test: [exe0_cppcheck, exe0_variables]
+        test: [exe0_cppcheck]
     steps:
       - uses: actions/checkout@v4
       - uses: insper-embarcados/actions-embedded-check@v1
+        with:
+          c_file: ${{ matrix.test }}/main.c
+      - uses: insper-embarcados/actions-cppcheck@v1
         with:
           c_file: ${{ matrix.test }}/main.c
