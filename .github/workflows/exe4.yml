@@ -11,12 +11,15 @@ jobs:
       - uses: actions/checkout@v5
       - uses: insper-embarcados/pico-build@v1
       - uses: insper-embarcados/actions-firmware-rubric-check@v0
+        if: ${{ always() }}
         with:
           c_file: exe4/main.c
           rubric_file: exe4/rubric_firmware.yml
       - uses: insper-embarcados/actions-embedded-check@v1
+        if: ${{ always() }}
         with:
           c_file: exe4/main.c
       - uses: insper-embarcados/actions-cppcheck@v1
+        if: ${{ always() }}
         with:
           c_file: exe4/main.c

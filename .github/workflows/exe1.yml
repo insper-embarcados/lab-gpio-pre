@@ -11,12 +11,15 @@ jobs:
       - uses: actions/checkout@v5
       - uses: insper-embarcados/pico-build@v1
       - uses: insper-embarcados/actions-wokwi-test@v3
+        if: ${{ always() }}
         with:
           token: ${{ secrets.WOKWI_CLI_TOKEN }}
           test_name: exe1
       - uses: insper-embarcados/actions-embedded-check@v1
+        if: ${{ always() }}
         with:
           c_file: exe1/main.c
       - uses: insper-embarcados/actions-cppcheck@v1
+        if: ${{ always() }}
         with:
           c_file: exe1/main.c
