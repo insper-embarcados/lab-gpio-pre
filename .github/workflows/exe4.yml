@@ -1,25 +1,38 @@
-name: exe3
+name: exe4
 
 on:
   push:
     paths:
       - 'exe4/main.c'
+
 jobs:
-  exe3:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
       - uses: insper-embarcados/pico-build@v1
+
+  rubric:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
       - uses: insper-embarcados/actions-firmware-rubric-check@v0
-        if: ${{ always() }}
         with:
           c_file: exe4/main.c
           rubric_file: exe4/rubric_firmware.yml
+
+  embedded-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
       - uses: insper-embarcados/actions-embedded-check@v1
-        if: ${{ always() }}
         with:
           c_file: exe4/main.c
+
+  cppcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
       - uses: insper-embarcados/actions-cppcheck@v1
-        if: ${{ always() }}
         with:
           c_file: exe4/main.c

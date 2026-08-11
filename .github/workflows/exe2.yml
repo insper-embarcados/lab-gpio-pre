@@ -4,22 +4,35 @@ on:
   push:
     paths:
       - 'exe2/main.c'
+
 jobs:
-  exe2:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
       - uses: insper-embarcados/pico-build@v1
+
+  wokwi:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
       - uses: insper-embarcados/actions-wokwi-test@v3
-        if: ${{ always() }}
         with:
           token: ${{ secrets.WOKWI_CLI_TOKEN }}
           test_name: exe2
+
+  embedded-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
       - uses: insper-embarcados/actions-embedded-check@v1
-        if: ${{ always() }}
         with:
           c_file: exe2/main.c
+
+  cppcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
       - uses: insper-embarcados/actions-cppcheck@v1
-        if: ${{ always() }}
         with:
           c_file: exe2/main.c
