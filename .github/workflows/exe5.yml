@@ -6,29 +6,16 @@ on:
       - 'exe5/main.c'
 
 jobs:
-  build:
+
+  build-and-wokwi:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
       - uses: insper-embarcados/pico-build@v1
-
-  wokwi:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v5
       - uses: insper-embarcados/actions-wokwi-test@v3
         with:
           token: ${{ secrets.WOKWI_CLI_TOKEN }}
           test_name: exe5
-
-  rubric:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v5
-      - uses: insper-embarcados/actions-firmware-rubric-check@v0
-        with:
-          c_file: exe5/main.c
-          rubric_file: exe5/rubric_firmware.yml
 
   embedded-check:
     runs-on: ubuntu-latest

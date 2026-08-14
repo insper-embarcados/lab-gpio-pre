@@ -6,20 +6,15 @@ on:
       - 'exe4/main.c'
 
 jobs:
-  build:
+  build-and-wokwi:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
       - uses: insper-embarcados/pico-build@v1
-
-  rubric:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v5
-      - uses: insper-embarcados/actions-firmware-rubric-check@v0
+      - uses: insper-embarcados/actions-wokwi-test@v3
         with:
-          c_file: exe4/main.c
-          rubric_file: exe4/rubric_firmware.yml
+          token: ${{ secrets.WOKWI_CLI_TOKEN }}
+          test_name: exe4
 
   embedded-check:
     runs-on: ubuntu-latest

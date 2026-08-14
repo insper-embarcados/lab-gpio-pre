@@ -6,16 +6,11 @@ on:
       - 'exe1/main.c'
 
 jobs:
-  build:
+  build-and-wokwi:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
       - uses: insper-embarcados/pico-build@v1
-
-  wokwi:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v5
       - uses: insper-embarcados/actions-wokwi-test@v3
         with:
           token: ${{ secrets.WOKWI_CLI_TOKEN }}
